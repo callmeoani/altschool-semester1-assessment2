@@ -1,0 +1,196 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 2.125rem;
+  padding-block-start: 8rem;
+  padding-block-end: 6rem;
+
+  @media (width >= 768px) {
+    gap: 10rem;
+  }
+
+  & hgroup {
+    text-align: center;
+    width: 94%;
+    max-width: 576px;
+    margin-inline: auto;
+
+    & h2 {
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 2rem;
+
+      @media (width >= 768) {
+        font-size: 2.5rem;
+      }
+
+      & span {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 94%;
+  margin-inline: auto;
+  max-width: 68rem;
+  position: relative;
+
+  @media (width >= 820px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.plan {
+  width: 94%;
+  max-width: 410px;
+  margin-inline: auto;
+  border-radius: var(--primary-radius);
+  padding-inline: 4%;
+  padding-block-start: 2rem;
+  padding-block-end: 2.8125rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+
+  @media (width >= 820px) {
+    margin: 0;
+    padding-inline: 2%;
+  }
+
+  & .category {
+    font-size: 1.5rem;
+  }
+
+  & .amount {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  & .plan-summary {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+
+    & li {
+      background-repeat: no-repeat;
+      background-position: left center; /* Aligns vertically with the text */
+      background-size: 16px 16px; /* Set your exact icon size */
+      padding-left: 1.5rem; /* Creates space for the icon */
+    }
+  }
+}
+
+.basic,
+.teams {
+  border: solid 0.4px var(--blue-color);
+  max-width: 379px;
+
+  @media (width >= 768px) {
+    padding-inline: auto;
+    align-items: right;
+  }
+
+  & ul {
+    & li {
+      background-image: url("/assets/images/check-circle.svg");
+    }
+  }
+}
+
+.professional {
+  color: var(--light-color);
+  background-color: var(--secondary-color);
+
+  @media (width >= 820px) {
+    position: absolute;
+    z-index: 1;
+    width: 40%;
+    max-width: 25.625rem;
+    height: 39.1875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & ul {
+    & li {
+      background-image: url("/assets/images/check-circle-white.svg");
+    }
+  }
+}
+
+#basic-plan {
+  @media (width >= 820px) {
+    align-items: flex-start;
+  }
+  @media (width >= 1024px) {
+    align-items: center;
+  }
+}
+#teams-plan {
+  @media (width >= 820px) {
+    align-items: flex-end;
+  }
+  @media (width >= 1024px) {
+    align-items: center;
+  }
+}
+
+.pricing-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin-block-start: 2rem;
+  margin-inline: auto;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    width: 50%;
+    max-width: 25.75rem;
+    margin-inline: auto;
+  }
+}
+
+.get-pricing {
+  border: solid 1px var(--primary-color);
+  border-radius: var(--button-radius);
+  color: var(--primary-color);
+  background-color: var(--light-color);
+  height: 3rem;
+  flex: 1;
+  padding-block: 1.125rem;
+}
+
+.select-pricing {
+  border-radius: var(--button-radius);
+  background-color: var(--primary-color);
+  height: 3rem;
+  border: none;
+  flex: 1;
+  padding-block: 1.125rem;
+}

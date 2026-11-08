@@ -1,0 +1,5 @@
+h1 {
+  border: solid 10px;
+  border-image: linear-gradient(to bottom, green, red) 1;
+
+}

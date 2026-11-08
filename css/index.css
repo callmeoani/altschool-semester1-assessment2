@@ -1,0 +1,119 @@
+:root {
+  /* colors */
+  --primary-color: hsla(216, 100%, 50%, 1);
+  --secondary-color: hsla(209, 41%, 20%, 1);
+  --blue-color: hsla(216, 100%, 44%, 1);
+  --dark-color: #141414;
+  --light-color: hsla(0, 0%, 100%, 1);
+
+  /* radius */
+  --primary-radius: 12px;
+  --button-radius: 100px;
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url("/assets/fonts/Gilroy-Bold.ttf") format("truetype");
+    font-style: normal;
+
+}
+@font-face {
+    font-family: GilroyRegular;
+    src: url("/assets/fonts/Gilroy-Regular.ttf") format("truetype");
+    font-style: normal;
+
+}
+@font-face {
+    font-family: GilroyMedium;
+    src: url("/assets/fonts/Gilroy-Medium.ttf") format("truetype");
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'GilroyMedium', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  /* min-width: 20rem; */
+  color: hsla(0, 0%, 8%, 1);
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+    font-family: 'GilroyBold', Arial, sans-serif;
+}
+
+.overall-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.buttonly-link {
+  color: var(--light-color);
+  border-radius: var(--button-radius);
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonly-link:hover {
+  text-decoration: none;
+  opacity: 0.85;
+  transform: scale(1.01);
+}
+
+.signup-btn {
+  width: 80%;
+  height: 2.75rem;
+  background-color: var(--primary-color);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+  font-weight: 500;
+}
+
+.vertical-bar {
+  height: 48px;
+  width: 5px;
+  background: linear-gradient(hsla(209, 49%, 13%, 1), hsla(209, 28%, 42%, 0));
+  /* display: none; */
+  display: block;
+  position: absolute;
+  inset-inline-start: -1rem;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+}
+
+/* .barred-title {
+
+} */
+
+
+.sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  border: none;
+}
+
+.input-box {
+  border: solid 0.0625rem hsla(216, 100%, 60%, 1);
+  border-radius: var(--primary-radius);
+  color: hsla(216, 100%, 60%, 1);
+  width: 100%;
+  padding-inline: 8px;
+  font-size: 14px;
+}
+
+.input-box::placeholder {
+  color: hsla(216, 100%, 60%, 1);
+  font-size: 14px;
+}
